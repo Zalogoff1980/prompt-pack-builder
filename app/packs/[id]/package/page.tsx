@@ -54,7 +54,7 @@ export default function ProductPackagingPage() {
   if (pack === null) {
     return (
       <div className="max-w-2xl mx-auto px-6 py-16 text-center">
-        <p className="text-graphite-300 mb-4">This pack couldn't be found.</p>
+        <p className="text-graphite-300 mb-4">This pack couldn&apos;t be found.</p>
         <Link href="/packs" className="focus-ring text-cyan-accent hover:underline">
           Back to My Packs
         </Link>
@@ -99,7 +99,7 @@ export default function ProductPackagingPage() {
       <div className="flex items-center justify-between mb-8">
         <div>
           <h1 className="font-display text-2xl font-medium text-graphite-100">Product Packaging</h1>
-          <p className="text-[12.5px] text-graphite-500 mt-1">Turn "{pack.name}" into a product you can sell.</p>
+          <p className="text-[12.5px] text-graphite-500 mt-1">Turn &quot;{pack.name}&quot; into a product you can sell.</p>
         </div>
         <Link href={`/packs/${pack.id}`} className="focus-ring text-[13px] text-graphite-400 hover:text-graphite-100">
           Back to editor
@@ -169,7 +169,7 @@ export default function ProductPackagingPage() {
 
             {whatsInside.length > 0 && (
               <div className="mb-5">
-                <div className="text-[11.5px] font-medium text-graphite-500 mb-2">What's inside</div>
+                <div className="text-[11.5px] font-medium text-graphite-500 mb-2">What&apos;s inside</div>
                 <ul className="flex flex-col gap-1.5">
                   {whatsInside.map((item, i) => (
                     <li key={i} className="text-[13px] text-graphite-200 flex items-center gap-2">

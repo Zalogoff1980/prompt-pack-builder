@@ -37,7 +37,7 @@ export default function PackEditorPage() {
   if (pack === null) {
     return (
       <div className="max-w-2xl mx-auto px-6 py-16 text-center">
-        <p className="text-graphite-300 mb-4">This pack couldn't be found.</p>
+        <p className="text-graphite-300 mb-4">This pack couldn&apos;t be found.</p>
         <Link href="/packs" className="focus-ring text-cyan-accent hover:underline">
           Back to My Packs
         </Link>

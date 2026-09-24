@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import BrandMark from "@/components/BrandMark";
 
 const NAV_ITEMS = [
   { href: "/", label: "Dashboard" },
@@ -14,9 +15,13 @@ export default function Sidebar() {
 
   return (
     <aside className="hidden md:flex w-64 shrink-0 flex-col border-r border-graphite-700/60 bg-graphite-900/60 px-5 py-6">
-      <div className="mb-10">
-        <div className="font-display text-[15px] font-medium tracking-tight text-graphite-100">Prompt Pack Builder</div>
-      </div>
+      <Link href="/" className="focus-ring flex items-center gap-3 mb-10 rounded-lg">
+        <BrandMark size={34} />
+        <div className="font-display text-[13px] font-medium leading-tight tracking-wide text-graphite-100">
+          <div>PROMPT PACK</div>
+          <div>BUILDER</div>
+        </div>
+      </Link>
 
       <div className="text-[11px] font-medium tracking-wide text-graphite-500 mb-3">Navigation</div>
       <nav className="flex flex-col gap-1">
@@ -28,7 +33,7 @@ export default function Sidebar() {
               href={item.href}
               className={`focus-ring rounded-lg px-3 py-2 text-sm transition-colors ${
                 active
-                  ? "bg-grad-accent text-graphite-100 border border-cyan-accent/20"
+                  ? "bg-grad-accent text-graphite-100 border border-cyan-accent/20 shadow-glow"
                   : "text-graphite-300 hover:bg-graphite-800 hover:text-graphite-100"
               }`}
             >

@@ -24,6 +24,11 @@ const config: Config = {
         violet: {
           accent: "#9b87f5",
         },
+        gold: {
+          DEFAULT: "#c9a24b",
+          light: "#f5da8a",
+          dark: "#8a6a1f",
+        },
       },
       fontFamily: {
         display: ["var(--font-display)", "sans-serif"],
@@ -32,9 +37,11 @@ const config: Config = {
       },
       boxShadow: {
         glow: "0 0 0 1px rgba(79,216,224,0.15), 0 8px 30px -10px rgba(79,216,224,0.25)",
+        gold: "0 0 0 1px rgba(201,162,75,0.25), 0 8px 30px -10px rgba(201,162,75,0.35)",
       },
       backgroundImage: {
         "grad-accent": "linear-gradient(135deg, rgba(79,216,224,0.16), rgba(155,135,245,0.16))",
+        "grad-gold": "linear-gradient(135deg, #f5da8a, #c9a24b 55%, #8a6a1f)",
       },
     },
   },

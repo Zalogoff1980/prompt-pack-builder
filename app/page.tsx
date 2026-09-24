@@ -36,36 +36,35 @@ export default function DashboardPage() {
   return (
     <div>
       {/* HERO */}
-      <section className="max-w-6xl mx-auto px-6 md:px-10 pt-10 md:pt-16 pb-8 md:pb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center">
-          <div>
-            <h1 className="font-display text-[34px] leading-[1.08] sm:text-5xl sm:leading-[1.05] font-medium tracking-tight text-graphite-100 mb-5">
-              TURN IDEAS INTO
-              <br />
-              PROFESSIONAL AI PROMPT PACKS
-            </h1>
-            <p className="text-graphite-400 max-w-md mb-8 text-[15px] leading-relaxed">
-              Create, customize and package production-ready prompts for image, video, music and text.
-            </p>
-            <Link
-              href="/create"
-              className="focus-ring inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-accent to-violet-accent px-6 py-3.5 text-sm font-medium text-graphite-950 hover:opacity-90 transition-opacity shadow-glow"
-            >
-              + CREATE A PACK →
-            </Link>
-          </div>
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0">
+          <Image
+            src="/assets/inspiration/hero.png"
+            alt="AI-generated creative visuals composed around a product shot"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-graphite-950/90 via-graphite-950/65 to-graphite-950/35" />
+          <div className="absolute inset-0 hidden lg:block bg-gradient-to-r from-graphite-950/70 via-graphite-950/20 to-transparent" />
+        </div>
 
-          <div className="relative aspect-[16/9] lg:aspect-[3/2] rounded-2xl overflow-hidden border border-graphite-700/60 shadow-glow">
-            <Image
-              src="/assets/inspiration/hero.png"
-              alt="AI-generated creative visuals composed around a product shot"
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-graphite-950/50 via-transparent to-transparent" />
-          </div>
+        <div className="relative max-w-6xl mx-auto px-6 md:px-10 pt-14 pb-14 md:pt-24 md:pb-24 min-h-[420px] sm:min-h-[460px] lg:min-h-[560px] flex flex-col justify-center">
+          <h1 className="font-display text-[34px] leading-[1.08] sm:text-5xl sm:leading-[1.05] font-medium tracking-tight text-graphite-100 mb-5 max-w-2xl">
+            TURN IDEAS INTO
+            <br />
+            PROFESSIONAL AI PROMPT PACKS
+          </h1>
+          <p className="text-graphite-300 max-w-md mb-8 text-[15px] leading-relaxed">
+            Create, customize and package production-ready prompts for image, video, music and text.
+          </p>
+          <Link
+            href="/create"
+            className="focus-ring inline-flex items-center gap-2 w-fit rounded-xl bg-gradient-to-r from-cyan-accent to-violet-accent px-6 py-3.5 text-sm font-medium text-graphite-950 hover:opacity-90 transition-opacity shadow-glow"
+          >
+            + CREATE A PACK →
+          </Link>
         </div>
       </section>
 

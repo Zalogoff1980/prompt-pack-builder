@@ -36,8 +36,8 @@ export default function DashboardPage() {
   return (
     <div>
       {/* HERO */}
-      <section className="max-w-6xl mx-auto px-6 md:px-10 pt-10 md:pt-16 pb-14 md:pb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <section className="max-w-6xl mx-auto px-6 md:px-10 pt-10 md:pt-16 pb-8 md:pb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-16 items-center">
           <div>
             <h1 className="font-display text-[34px] leading-[1.08] sm:text-5xl sm:leading-[1.05] font-medium tracking-tight text-graphite-100 mb-5">
               TURN IDEAS INTO
@@ -55,7 +55,7 @@ export default function DashboardPage() {
             </Link>
           </div>
 
-          <div className="relative aspect-[3/2] rounded-2xl overflow-hidden border border-graphite-700/60 shadow-glow">
+          <div className="relative aspect-[16/9] lg:aspect-[3/2] rounded-2xl overflow-hidden border border-graphite-700/60 shadow-glow">
             <Image
               src="/assets/inspiration/hero.png"
               alt="AI-generated creative visuals composed around a product shot"

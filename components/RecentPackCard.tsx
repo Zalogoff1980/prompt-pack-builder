@@ -30,7 +30,7 @@ export default function RecentPackCard({ pack }: { pack: PromptPack }) {
       href={`/packs/${pack.id}`}
       className="focus-ring group block rounded-2xl border border-graphite-700/60 bg-graphite-900/40 overflow-hidden transition-colors hover:border-cyan-accent/30"
     >
-      <div className="relative aspect-[16/10] w-full overflow-hidden">
+      <div className="relative aspect-[16/9] w-full overflow-hidden">
         {luxury ? (
           <Image
             src="/assets/inspiration/featured-luxury-ads.png"
@@ -40,20 +40,24 @@ export default function RecentPackCard({ pack }: { pack: PromptPack }) {
             className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
         ) : (
-          <div className={`h-full w-full bg-gradient-to-br ${gradientFor(pack)}`} />
+          <div className={`relative h-full w-full bg-gradient-to-br ${gradientFor(pack)} flex items-center justify-center`}>
+            <span className="font-display text-[11px] font-medium uppercase tracking-[0.2em] text-graphite-100/25">
+              {pack.contentType}
+            </span>
+          </div>
         )}
-        <div className="absolute top-2.5 right-2.5">
+        <div className="absolute top-2 right-2">
           <StatusBadge status={pack.status} />
         </div>
       </div>
-      <div className="p-4">
-        <h3 className="font-display text-[14px] font-medium text-graphite-100 truncate group-hover:text-cyan-accent transition-colors mb-1">
+      <div className="p-3">
+        <h3 className="font-display text-[13.5px] font-medium text-graphite-100 truncate group-hover:text-cyan-accent transition-colors mb-0.5">
           {pack.name}
         </h3>
-        <p className="text-[12px] text-graphite-400 uppercase tracking-wide">
+        <p className="text-[11px] text-graphite-400 uppercase tracking-wide">
           {pack.model} · {pack.prompts.length} prompts
         </p>
-        <p className="text-[12px] text-graphite-500">{pack.category}</p>
+        <p className="text-[11px] text-graphite-500">{pack.category}</p>
       </div>
     </Link>
   );

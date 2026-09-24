@@ -50,18 +50,20 @@ export default function DashboardPage() {
           <div className="absolute inset-0 hidden lg:block bg-gradient-to-r from-graphite-950/70 via-graphite-950/20 to-transparent" />
         </div>
 
-        <div className="relative max-w-6xl mx-auto px-6 md:px-10 pt-14 pb-14 md:pt-24 md:pb-24 min-h-[420px] sm:min-h-[460px] lg:min-h-[560px] flex flex-col justify-center">
-          <h1 className="font-display text-[34px] leading-[1.08] sm:text-5xl sm:leading-[1.05] font-medium tracking-tight text-graphite-100 mb-5 max-w-2xl">
+        <div className="relative max-w-6xl mx-auto px-6 md:px-10 pt-10 pb-10 md:pt-16 md:pb-16 min-h-[320px] sm:min-h-[360px] lg:min-h-[440px] flex flex-col justify-center">
+          <h1 className="font-display text-[28px] leading-[1.05] sm:text-[44px] sm:leading-[1.03] font-medium tracking-tight text-graphite-100 mb-3 max-w-2xl">
             TURN IDEAS INTO
             <br />
-            PROFESSIONAL AI PROMPT PACKS
+            PROFESSIONAL AI
+            <br />
+            PROMPT PACKS
           </h1>
-          <p className="text-graphite-300 max-w-md mb-8 text-[15px] leading-relaxed">
+          <p className="text-graphite-300 max-w-md mb-5 text-[13.5px] leading-snug">
             Create, customize and package production-ready prompts for image, video, music and text.
           </p>
           <Link
             href="/create"
-            className="focus-ring inline-flex items-center gap-2 w-fit rounded-xl bg-gradient-to-r from-cyan-accent to-violet-accent px-6 py-3.5 text-sm font-medium text-graphite-950 hover:opacity-90 transition-opacity shadow-glow"
+            className="focus-ring inline-flex items-center gap-2 w-fit rounded-xl bg-gradient-to-r from-cyan-accent to-violet-accent px-5 py-2.5 text-[13px] font-medium text-graphite-950 hover:opacity-90 transition-opacity shadow-glow"
           >
             + CREATE A PACK →
           </Link>
@@ -69,19 +71,19 @@ export default function DashboardPage() {
       </section>
 
       {/* INSPIRATION */}
-      <section className="max-w-6xl mx-auto px-6 md:px-10 pb-14 md:pb-20">
-        <div className="flex items-center justify-between mb-5">
-          <h2 className="font-display text-sm font-medium tracking-wide text-graphite-300 uppercase">Inspiration</h2>
-          <Link href="/create" className="focus-ring text-[12.5px] text-graphite-400 hover:text-cyan-accent">
-            View all →
+      <section className="max-w-6xl mx-auto px-6 md:px-10 pb-10 md:pb-16">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="font-display text-[15px] font-semibold tracking-wide text-graphite-200 uppercase">Inspiration</h2>
+          <Link href="/create" className="focus-ring inline-flex items-center gap-1 text-[12.5px] text-cyan-accent hover:opacity-80">
+            View all <span>→</span>
           </Link>
         </div>
-        <div className="flex md:grid md:grid-cols-6 gap-3 overflow-x-auto md:overflow-visible -mx-6 px-6 md:mx-0 md:px-0 pb-2 md:pb-0 snap-x snap-mandatory scrollbar-none">
+        <div className="flex md:grid md:grid-cols-6 gap-2.5 overflow-x-auto md:overflow-visible -mx-6 px-6 md:mx-0 md:px-0 pb-2 md:pb-0 snap-x snap-mandatory scrollbar-none">
           {INSPIRATION_CATEGORIES.map((cat) => (
             <Link
               key={cat.name}
               href="/create"
-              className="focus-ring group relative shrink-0 w-[130px] md:w-auto aspect-[3/4] rounded-xl overflow-hidden border border-graphite-700/60 hover:border-cyan-accent/30 transition-colors snap-start"
+              className="focus-ring group relative shrink-0 w-[120px] md:w-auto aspect-[4/5] rounded-xl overflow-hidden border border-graphite-700/60 hover:border-cyan-accent/30 transition-colors snap-start"
             >
               <Image
                 src={cat.image}
@@ -101,10 +103,10 @@ export default function DashboardPage() {
       </section>
 
       {/* FEATURED PACK */}
-      <section className="max-w-6xl mx-auto px-6 md:px-10 pb-14 md:pb-20">
-        <h2 className="font-display text-sm font-medium tracking-wide text-graphite-300 uppercase mb-5">Featured Pack</h2>
+      <section className="max-w-6xl mx-auto px-6 md:px-10 pb-10 md:pb-16">
+        <h2 className="font-display text-[15px] font-semibold tracking-wide text-graphite-200 uppercase mb-4">Featured Pack</h2>
         <div className="relative rounded-2xl overflow-hidden border border-gold/30 shadow-gold">
-          <div className="relative aspect-[16/9] sm:aspect-[21/9]">
+          <div className="absolute inset-0">
             <Image
               src="/assets/inspiration/featured-luxury-ads.png"
               alt="Luxury Ads — AI Product Prompt Pack"
@@ -112,27 +114,27 @@ export default function DashboardPage() {
               sizes="100vw"
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-graphite-950 via-graphite-950/60 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-graphite-950 via-graphite-950/65 to-graphite-950/25" />
           </div>
-          <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-9">
-            <span className="inline-flex items-center gap-1.5 w-fit rounded-full border border-gold/40 bg-gold/10 px-2.5 py-1 text-[11px] font-medium text-gold-light mb-4">
+          <div className="relative flex flex-col justify-end min-h-[230px] sm:min-h-[210px] p-4 sm:p-6">
+            <span className="inline-flex items-center gap-1.5 w-fit rounded-full border border-gold/40 bg-gold/10 px-2 py-0.5 text-[10px] font-medium text-gold-light mb-2.5">
               PREMIUM
             </span>
-            <h3 className="font-display text-2xl sm:text-4xl font-medium tracking-tight text-graphite-100 mb-1">LUXURY ADS</h3>
-            <p className="text-graphite-300 text-sm sm:text-base mb-1">AI Product Prompt Pack</p>
-            <p className="text-graphite-400 text-[13px] sm:text-sm max-w-md mb-5">
+            <h3 className="font-display text-xl sm:text-2xl font-medium tracking-tight text-graphite-100 mb-0.5">LUXURY ADS</h3>
+            <p className="text-graphite-300 text-[12.5px] sm:text-[13.5px] mb-1">AI Product Prompt Pack</p>
+            <p className="text-graphite-400 text-[11.5px] sm:text-[12px] leading-snug max-w-sm mb-3">
               30 professional prompts for stunning product advertising.
             </p>
-            <div className="flex flex-wrap gap-2 mb-6">
+            <div className="flex flex-wrap gap-1.5 mb-3.5">
               {["30 PROMPTS", "GPT-IMAGE", "PRODUCT ADVERTISING"].map((tag) => (
-                <span key={tag} className="rounded-full border border-graphite-600/60 bg-graphite-900/60 px-2.5 py-1 text-[10.5px] tracking-wide text-graphite-300">
+                <span key={tag} className="rounded-full border border-graphite-600/60 bg-graphite-900/60 px-2 py-0.5 text-[9.5px] tracking-wide text-graphite-300">
                   {tag}
                 </span>
               ))}
             </div>
             <Link
               href={featuredPack ? `/packs/${featuredPack.id}` : "/create"}
-              className="focus-ring inline-flex items-center gap-2 w-fit rounded-xl bg-grad-gold px-5 py-3 text-sm font-medium text-graphite-950 hover:opacity-90 transition-opacity"
+              className="focus-ring inline-flex items-center gap-2 w-fit rounded-xl bg-grad-gold px-4 py-2 text-[12.5px] font-medium text-graphite-950 hover:opacity-90 transition-opacity"
             >
               VIEW PACK →
             </Link>
@@ -141,12 +143,12 @@ export default function DashboardPage() {
       </section>
 
       {/* RECENT PACKS */}
-      <section className="max-w-6xl mx-auto px-6 md:px-10 pb-14 md:pb-20">
-        <div className="flex items-center justify-between mb-5">
-          <h2 className="font-display text-sm font-medium tracking-wide text-graphite-300 uppercase">Recent Packs</h2>
+      <section className="max-w-6xl mx-auto px-6 md:px-10 pb-10 md:pb-16">
+        <div className="flex items-center justify-between mb-4">
+          <h2 className="font-display text-[15px] font-semibold tracking-wide text-graphite-200 uppercase">Recent Packs</h2>
           {packs.length > 0 && (
-            <Link href="/packs" className="focus-ring text-[12.5px] text-graphite-400 hover:text-cyan-accent">
-              View all
+            <Link href="/packs" className="focus-ring inline-flex items-center gap-1 text-[12.5px] text-cyan-accent hover:opacity-80">
+              View all <span>→</span>
             </Link>
           )}
         </div>
@@ -162,7 +164,7 @@ export default function DashboardPage() {
             }
           />
         ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {packs.slice(0, 6).map((pack) => (
               <RecentPackCard key={pack.id} pack={pack} />
             ))}
